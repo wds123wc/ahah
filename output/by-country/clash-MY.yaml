@@ -6,17 +6,17 @@ log-level: info
 proxies:
 - name: 🇲🇾 MY 01 - xiaohe
   type: vless
-  server: 172.66.140.62
-  port: 8880
-  uuid: 3adac494-0eb1-4d89-a187-b2181691444d
+  server: 38.60.168.98
+  port: 2087
+  uuid: 8a346b7c-5b95-4845-affa-0e5d9929e9ae
   udp: true
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /pyip=ProxyIP.SG.CMLiussss.net
+    path: /db55c40bbc75
     headers:
-      Host: tiny-lake-bbf1.369-766.workers.dev
+      Host: 38.60.168.98
 - name: 🇲🇾 MY 02 - xiaohe
   type: vless
   server: 38.60.168.98
