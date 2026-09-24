@@ -6,33 +6,19 @@ log-level: info
 proxies:
 - name: 🇫🇮 FI 01 - xiaohe
   type: vless
-  server: 151.101.56.6
+  server: 151.101.56.7
   port: 443
-  uuid: 1fac5e18-2ca8-4626-c299-1f3f21c6b55e
+  uuid: 8abb648a-b004-42a4-aa05-49cdc2f94d4e
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: ssl.fastly.com
+  servername: global.fastly.com
   network: ws
   ws-opts:
-    path: /?
+    path: /
     headers:
-      Host: c12.com
+      Host: kayko.global.ssl.fastly.net
 - name: 🇫🇮 FI 02 - xiaohe
-  type: vless
-  server: 151.101.56.6
-  port: 443
-  uuid: 1fac5e18-2ca8-4626-c299-1f3f21c6b55e
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ssl.fastly.com
-  network: ws
-  ws-opts:
-    path: /?
-    headers:
-      Host: c12.com
-- name: 🇫🇮 FI 03 - xiaohe
   type: vless
   server: 185.79.138.71
   port: 448
@@ -51,7 +37,6 @@ proxy-groups:
   - AUTO
   - 🇫🇮 FI 01 - xiaohe
   - 🇫🇮 FI 02 - xiaohe
-  - 🇫🇮 FI 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -59,6 +44,5 @@ proxy-groups:
   proxies:
   - 🇫🇮 FI 01 - xiaohe
   - 🇫🇮 FI 02 - xiaohe
-  - 🇫🇮 FI 03 - xiaohe
 rules:
 - MATCH,PROXIES
