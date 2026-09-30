@@ -6,30 +6,46 @@ log-level: info
 proxies:
 - name: 🇵🇱 PL 01 - xiaohe
   type: vless
-  server: 188.114.97.6
-  port: 8080
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  server: 104.25.146.77
+  port: 443
+  uuid: e6cc4788-3c45-4df1-94f3-8303504a65bf
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: khoda.ak-khoda.workers.dev
   network: ws
   ws-opts:
-    path: /?ed=2560
+    path: /sync
     headers:
-      Host: 571x2.r4bn.bim.hh.vavava.kdns.fr
+      Host: khoda.ak-khoda.workers.dev
 - name: 🇵🇱 PL 02 - xiaohe
   type: vless
-  server: 188.114.97.6
-  port: 2086
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  server: 104.17.247.68
+  port: 443
+  uuid: e6cc4788-3c45-4df1-94f3-8303504a65bf
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: khoda.ak-khoda.workers.dev
   network: ws
   ws-opts:
-    path: /
+    path: /sync
     headers:
-      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
+      Host: khoda.ak-khoda.workers.dev
+- name: 🇵🇱 PL 03 - xiaohe
+  type: vless
+  server: 104.25.22.24
+  port: 443
+  uuid: e6cc4788-3c45-4df1-94f3-8303504a65bf
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: khoda.ak-khoda.workers.dev
+  network: ws
+  ws-opts:
+    path: /sync
+    headers:
+      Host: khoda.ak-khoda.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
@@ -37,6 +53,7 @@ proxy-groups:
   - AUTO
   - 🇵🇱 PL 01 - xiaohe
   - 🇵🇱 PL 02 - xiaohe
+  - 🇵🇱 PL 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -44,5 +61,6 @@ proxy-groups:
   proxies:
   - 🇵🇱 PL 01 - xiaohe
   - 🇵🇱 PL 02 - xiaohe
+  - 🇵🇱 PL 03 - xiaohe
 rules:
 - MATCH,PROXIES
