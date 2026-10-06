@@ -5,6 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇭 CH 01 - xiaohe
+  type: vless
+  server: 199.68.196.67
+  port: 443
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: fzo5i.ir46.90k.hh.ov0.kdns.fr
+  network: ws
+  ws-opts:
+    path: /glasspanel/guest000_0_5de14443985f/
+    headers:
+      Host: fzo5i.ir46.90k.hh.ov0.kdns.fr
+- name: 🇨🇭 CH 02 - xiaohe
   type: ss
   server: 132.243.175.144
   port: 8388
@@ -17,11 +31,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇨🇭 CH 01 - xiaohe
+  - 🇨🇭 CH 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇨🇭 CH 01 - xiaohe
+  - 🇨🇭 CH 02 - xiaohe
 rules:
 - MATCH,PROXIES
