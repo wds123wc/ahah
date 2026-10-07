@@ -4,31 +4,33 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇧🇬 BG 01 - xiaohe
-  type: vless
-  server: 13.140.29.170
+- name: 🇧🇷 BR 01 - xiaohe
+  type: vmess
+  server: aksai.org
   port: 443
-  uuid: 817b61c8-9bf0-4365-8a52-e43dfad274a6
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: shin-ra.ccwu.cc
+  servername: aksai.org
   network: ws
   ws-opts:
-    path: /fp=unsafe
+    path: /linkvws
     headers:
-      Host: shin-ra.ccwu.cc
+      Host: aksai.org
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇧🇬 BG 01 - xiaohe
+  - 🇧🇷 BR 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇧🇬 BG 01 - xiaohe
+  - 🇧🇷 BR 01 - xiaohe
 rules:
 - MATCH,PROXIES
