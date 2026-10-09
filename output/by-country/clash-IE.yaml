@@ -9,9 +9,16 @@ proxies:
   server: 20.123.11.204
   port: 443
   cipher: chacha20-ietf-poly1305
-  password: t1eiTbNnl7rpe1il
+  password: H0gtOZkrqraldrhM
   udp: true
 - name: 🇮🇪 IE 02 - xiaohe
+  type: ss
+  server: 20.123.11.204
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: t1eiTbNnl7rpe1il
+  udp: true
+- name: 🇮🇪 IE 03 - xiaohe
   type: vless
   server: 23.95.225.10
   port: 8443
@@ -25,13 +32,6 @@ proxies:
     path: /
     headers:
       Host: ccc.010304.xyz
-- name: 🇮🇪 IE 03 - xiaohe
-  type: ss
-  server: 20.123.11.204
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: H0gtOZkrqraldrhM
-  udp: true
 proxy-groups:
 - name: PROXIES
   type: select
