@@ -15,7 +15,7 @@ proxies:
   reality-opts:
     public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
   servername: www.apple.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 - name: 🇨🇭 CH 02 - xiaohe
   type: ss
   server: 132.243.175.144
@@ -53,21 +53,7 @@ proxies:
   reality-opts:
     public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
   servername: www.apple.com
-  client-fingerprint: firefox
-- name: 🇨🇭 CH 06 - xiaohe
-  type: vless
-  server: 116.204.164.30
-  port: 7443
-  uuid: d5f29a64-da5d-4f99-b3c4-ae92cc39ad5f
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -78,7 +64,6 @@ proxy-groups:
   - 🇨🇭 CH 03 - xiaohe
   - 🇨🇭 CH 04 - xiaohe
   - 🇨🇭 CH 05 - xiaohe
-  - 🇨🇭 CH 06 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -89,6 +74,5 @@ proxy-groups:
   - 🇨🇭 CH 03 - xiaohe
   - 🇨🇭 CH 04 - xiaohe
   - 🇨🇭 CH 05 - xiaohe
-  - 🇨🇭 CH 06 - xiaohe
 rules:
 - MATCH,PROXIES
